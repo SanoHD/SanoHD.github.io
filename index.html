@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome</title>
+		<link rel="stylesheet" href="/css/master.css">
+	</head>
+	<body>
+		<div class="title-wrapper">
+			<h1 class="title">Hiiii</h1>
+		</div>
+
+		<hr>
+
+		<p class="description"><a href="https://GitHub.com/SanoHD" title="My GitHub Account">https://GitHub.com/SanoHD</a></p>
+
+		<div class="projects">
+			<p class="project extended">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+			<p class="project">SanoHD.github.io</p>
+		</div>
+
+		<p class="description"><a href="https://youtu.be/dQw4w9WgXcQ?t=1" title="YouTube | Cute and funny cats compilation 2021">Click here for cute cats</a></p>
+
+
+
+		<script type="text/javascript">
+
+			window.scroll(0, 0);
+
+			/*
+			for (var i = 0; i < 300; i++) {
+				var p = document.createElement("p");
+				p.classList.add("project");
+				p.innerHTML = i + 1;
+				document.getElementsByClassName("projects")[0].appendChild(p);
+			}
+			*/
+
+			window.onscroll = function() {
+
+				for (var i = 0; i < document.getElementsByClassName("project").length; i++) {
+					document.getElementsByClassName("project")[i].className = "project";
+				}
+
+				sy = window.scrollY + 100;
+				index = (sy/157).toFixed() - 1;
+
+				if (document.getElementsByClassName("project").length > index) {
+					console.log("Index: " + index, "Available: " + document.getElementsByClassName("project").length);
+					document.getElementsByClassName("project")[index].className = "project extended";
+				}
+			}
+		</script>
+	</body>
+</html>
